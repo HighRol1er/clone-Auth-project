@@ -2,7 +2,7 @@ import {create} from "zustand"; // 상태관리 라이브러리
 import axios from "axios";
 
 
-const API_URL = "http://localhost:5010/api/auth";
+const API_URL = import.meta.env.MODE === "development" ? "http://localhost:5010/api/auth" : "/api/auth";
 
 // every single request axios will just put the cookies into the header
 axios.defaults.withCredentials = true;
