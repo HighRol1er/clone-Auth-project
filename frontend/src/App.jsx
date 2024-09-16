@@ -80,6 +80,8 @@ function App() {
           <ResetPasswordPage /> 
         </RedirectAuthenticatedUser>}/>
       </Routes>
+      {/* catch all routes */}
+      <Route path='*' element={<Navigate to='/' replace />} />
       <Toaster />
     </div>
   )
