@@ -2,7 +2,11 @@ import { Check, X } from "lucide-react";
 
 
 const PasswordCriteria = ({ password }) => {
-  //criteria : "표준"이라는 뜻 
+  /**
+   * criteria : "표준"이라는 뜻
+   * 정규 표현식을 .test()로 ture, false 체크 
+   * 
+  */
   const criteria = [
     { label: "At least 6 characters", met: password.length >= 6 },
 		{ label: "Contains uppercase letter", met: /[A-Z]/.test(password) },
